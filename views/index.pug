@@ -1,0 +1,373 @@
+doctype html
+html(lang='en')
+  head
+    title STRV M6
+    // Import Google Icon Font
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    // Import css styles
+    link(rel='stylesheet', href='strv.css')
+    meta(charset='UTF-8')
+    // Website optimized for mobile
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
+  body
+    // Clip paths for non-square divs
+    svg(width='0', height='0')
+      defs
+        clippath#clip-index(clippathunits='objectBoundingBox')
+          polygon(points='0,0 1,0 1,0.773 0.349,1 0,0.76 0,0')
+        clippath#clip-index-mobile(clippathunits='objectBoundingBox')
+          polygon(points='0,0 1,0 1,0.953 0.249,1 0,0.97')
+        clippath#clip-bottom(clippathunits='objectBoundingBox')
+          polygon(points='0,0.017 0.34,0.237 1,0 1,1 0,1')
+        clippath#clip-bottom-mobile(clippathunits='objectBoundingBox')
+          polygon(points='0,0.016 0.25,0.05 1,0 1,1 0,1')
+        clippath#clip-how-it-works(clippathunits='objectBoundingBox')
+          polygon(points='0,0.01 0.34,0.16 1,0 1,1 0,1 ')
+    // Navigation bar
+    nav.pushpin-nav-bar
+      .nav-wrapper
+        // Desktop Navigation
+        ul.hide-on-med-and-down
+          li
+            a.li-no-hover(href='#about-us') ABOUT US
+          li
+            a(href='#how-it-works') HOW IT WORKS
+          li
+            a(href='#comments') COMMENTS
+        // Mobile Navigation
+        a.right.button-collapse(href='#', data-activates='mobile-menu')
+          i.material-icons menu
+        div
+          ul#mobile-menu.side-nav.center
+            li
+              a(href='#about-us') ABOUT US
+            li
+              a(href='#how-it-works') HOW IT WORKS
+            li
+              a(href='#comments') COMMENTS
+    // INDEX BANNER
+    // DESKTOP
+    #index-banner.section.no-pad-bot.valign-wrapper.hide-on-med-and-down(style="clip-path: url('#clip-index');")
+      #index-banner-content.center-block
+        h1.text_h.center.header.banner-title.letters.type
+          span
+            b New STRV M6
+        h4.text_h.center.banner-subtitle
+          span
+            | Simply designy car for designers
+        a.waves-effect.center.waves-light.btn-large.z-depth-0.button(href='#comments')
+          | LEAVE A COMMENT
+          img.arrow-icon(src="arrow-icn.svg", alt="arrow-icon")
+      #new-strv
+        img#new-strv-watermark(src="NEW-STRV.png", alt="new-strv-watermark")
+    // MEDIUM
+    #index-banner-medium.section.no-pad-bot.valign-wrapper.hide-on-small-only.hide-on-large-only.show-on-medium(style="clip-path: url('#clip-index');")
+      #index-banner-medium-content.center-block
+        h1.text_h.center.header.banner-title-medium.letters.type
+          span
+            b New STRV M6
+        h4.text_h.center.banner-subtitle
+          span
+            | Simply designy car for designers
+        a.waves-effect.center.waves-light.btn-large.z-depth-0.button(href='#comments')
+          | LEAVE A COMMENT
+          img.arrow-icon(src='arrow-icn.svg')
+      #new-strv.hide-on-med-and-down
+        img#new-strv-watermark(src='NEW-STRV.png', alt='new-strv-watermark')
+    // MOBILE
+    #index-banner-mobile.section.no-pad-bot.valign-wrapper.hide-on-med-and-up(style="clip-path: url('#clip-index-mobile');")
+      #index-banner-content-mobile.center-block
+        h1.text_h.center.header.banner-title.letters.type
+          span
+            b
+              | New
+              br
+              |  STRV
+              br
+              |  M6
+        h4.text_h.center.banner-subtitle
+          span
+            | Simply designy car
+            br
+            |  for designers
+        a.waves-effect.center.waves-light.btn-large.z-depth-0.button(href='#comments')
+          | LEAVE A COMMENT
+          img.arrow-icon(src='arrow-icn.svg')
+    // ABOUT US section
+    #about-us.section.scrollspy
+      #title-about-us.section-title
+        h6.section-number 01
+        h6.section-name ABOUT US
+        .red-stripe.hide-on-med-and-down
+      // Desktop Handmade img
+      #handmade-container.hide-on-med-and-down
+        img#handmade(src='handmade.svg', alt='handmade')
+      // MOBILE Handmade img
+      #handmade-mobile-container.hide-on-large-only
+        img#handmade-mobile(src='handmade-mobile.svg', alt='handmadeMobile')
+      // Desktop
+      #about-us-container.container.hide-on-med-and-down
+        #about-us-card.card.z-depth-2
+          .row.card-content
+            .col.s4.about-us-info.center
+              img.brush-icon(src='brush.svg')
+              .about-us-text-container.first-text-container
+                p.caption
+                  | Designed by
+                  br
+                  |  10 STRV Designers
+                p.about-us-text.light
+                  | Every piece of this car is handmade. Our all 10 designers check Pinterest, Dribbble and Behance for inspirations and did this awesome car!
+            .about-us-divider
+            .about-us-info.center.col.s4
+              img.leaf-icon(src='leaf.svg')
+              .about-us-text-container
+                p.caption
+                  | Nature Handcarft
+                  br
+                  |  Materials
+                p.about-us-text.light
+                  | We using natural recycable materials like wood from our forest or co-operate with DannyP brand and his awesome leather stuff.
+            .about-us-divider
+            .about-us-info.center.col.s4
+              img.heart-icon(src='heart.svg')
+              .about-us-text-container.last-text-container
+                p.caption
+                  | Only 20 pieces
+                  br
+                  |  in the World!
+                p.about-us-text.light
+                  | Designer is a human, right? Handmade things takes a lot of time and energy. Every designer have 2 cars in his pocket. So hurry up!
+      // MOBILE
+      #about-us-mobile-container.container.hide-on-large-only
+        .card.z-depth-2
+          .card-content
+            .row
+              .about-us-mobile-info.center
+                img.brush-icon(src='brush.svg')
+                .about-us-text-mobile-container
+                  p.about-us-mobile-caption.mobile-caption.flow-text
+                    | Designed by
+                    br
+                    |  10 STRV Designers
+                  p.about-us-mobile-text.light.flow-text
+                    | Every piece of this car is handmade. Our all 10 designers check Pinterest, Dribbble and Behance for inspirations and did this awesome car!
+            .about-us-mobile-divider
+            .row
+              .about-us-mobile-info.center
+                img.leaf-icon(src='leaf.svg')
+                .about-us-text-mobile-container
+                  p.about-us-mobile-caption.mobile-caption.flow-text
+                    | Nature Handcarft
+                    br
+                    |  Materials
+                  p.about-us-mobile-text.light.flow-text
+                    | We using natural recycable materials like wood from our forest or co-operate with DannyP brand and his awesome leather stuff.
+            .about-us-mobile-divider
+            .row
+              .about-us-mobile-info.center
+                img.heart-icon(src='heart.svg')
+                .about-us-text-mobile-container.last-text-container
+                  p.about-us-mobile-caption.mobile-caption.flow-text
+                    | Only 20 pieces
+                    br
+                    |  in the World!
+                  p.about-us-mobile-text.light.flow-text
+                    | Designer is a human, right? Handmade things takes a lot of time and energy. Every designer have 2 cars in his pocket. So hurry up!
+    // How it Works
+    #how-it-works-bg.hide-on-med-and-down(style="clip-path: url('#clip-how-it-works');")
+    #how-it-works-mobile-bg.hide-on-med-and-up
+    #how-it-works.section.scrollspy
+      #title-how-it-works.section-title
+        h6.section-number 02
+        h6.section-name HOW IT WORKS
+        .red-stripe.hide-on-med-and-down
+      #how-it-works-container.container
+        // Desktop
+        .row.center.hide-on-med-and-down
+          .col.l4.how-it-works-step
+            .how-it-works-step-number
+              span 1
+            .how-it-works-step-caption.caption
+              p
+                | Pick Your
+                br
+                |  Favourite Designer
+          .how-it-works-divider
+          .col.l4.how-it-works-step
+            .how-it-works-step-number
+              span 2
+            .how-it-works-step-caption.caption
+              p
+                | Give Him $3M
+                br
+                |  in Fancy Suitcase
+          .how-it-works-divider
+          .col.l4.how-it-works-step
+            .how-it-works-step-number
+              span 3
+            .how-it-works-step-caption.caption
+              p
+                | Wait for the
+                br
+                |  Masterpiece
+        // Mobile
+        .row.center.hide-on-large-only
+          .col.s12.how-it-works-mobile-step
+            .how-it-works-mobile-step-number
+              span 1
+            .how-it-works-mobile-step-caption.mobile-caption
+              p
+                | Pick Your
+                br
+                |  Favourite Designer
+          .how-it-works-mobile-divider
+          .col.s12.how-it-works-mobile-step
+            .how-it-works-mobile-step-number
+              span 2
+            .how-it-works-mobile-step-caption.mobile-caption
+              p
+                | Give Him $3M
+                br
+                |  in Fancy Suitcase
+          .how-it-works-mobile-divider
+          .col.s12.l4.how-it-works-mobile-step
+            .how-it-works-mobile-step-number
+              span 3
+            .how-it-works-mobile-step-caption.mobile-caption
+              p
+                | Wait for the
+                br
+                |  Masterpiece
+        .row.center
+          a.waves-effect.center.waves-light.btn-large.z-depth-0.button
+            | CHOOSE YOUR DESIGNER
+            img.arrow-icon(src='arrow-icn.svg')
+        div
+          .row.center.hide-on-med-and-down.bmw-image-section
+            img#STRV-watermark.s12(src='STRV M6.svg')
+            img#bmw-image.s12(src='image-bmw.png')
+    // COMMENTS
+    #comments.section.scrollspy
+      #title-comments.section-title
+        h6.section-number 03
+        h6.section-name COMMENTS
+        .red-stripe.hide-on-med-and-down
+      #comment-section-container.container
+        .row.section
+          #comment-field.col.s12.card
+            .hide-on-small-only
+              #commenting-avatar.col.m1.push-m1.avatar
+                img(src='Avatar.png')
+              input#comment-textbox.col.m9.push-m1(type='text', name='name', placeholder='Write your comment here...')
+              .col.m1.push-m1
+                button#send-button.btn-flat.waves-effect.waves-light.btn-floating.click-to-toggle.btn-large(type='submit')
+            .hide-on-med-and-up
+              #commenting-avatar-mobile.center-align.row
+                img(src='Avatar.png')
+              .row.center-align
+                input#comment-textbox-mobile.col.s10.push-s1.center-align(type='text', name='name', placeholder='Write your comment here...')
+              .row.center-align
+                button#send-button-mobile.btn-flat.waves-effect.waves-light.btn-floating.center-align.btn-large(type='submit')
+        .row
+          .col.s7.hide-on-small-only
+            span#comment-number 3 Comments
+          .center-align.hide-on-med-and-up
+            span#comment-number-mobile 3 Comments
+        .row.section
+          .col.s12.m9.card.z-depth-1.push-m1.comment-card
+            .comment
+              .row
+                .col.s1.avatar
+                  img(src='Avatar.png')
+                .comment-tag.col.s7
+                  .commenter-name
+                    span Saul Goodman
+                  .comment-time
+                    span 4 days
+                a.right.reply-icon(href='#')
+              .row
+                .comment-text.col.s12.l11.offset-s1
+                  p
+                    | I’m just testing the comment section. I really like this car. I especially like the fact that it only costs $3M. That’s amazing.
+          .col.s12.m8.card.push-m2.thread-comment-card
+            .comment
+              .row
+                .col.s1.avatar
+                .comment-tag.col.s7
+                  .commenter-name
+                    span Saul Goodman
+                  .comment-time
+                    span 4 days
+                a.right.reply-icon(href='#')
+              .row
+                .comment-text.col.s12.l9.offset-s1
+                  p
+                    | I’m just testing the comment section. I really like this car. I especially like the fact that it only costs $3M. That’s amazing.
+          .col.s12.m9.card.z-depth-1.push-m1.comment-card
+            .comment
+              .row
+                .col.s1.avatar
+                  img(src='Avatar.png')
+                .comment-tag.col.s7
+                  .commenter-name
+                    span Saul Goodman
+                  .comment-time
+                    span 4 days
+                a.right.reply-icon(href='#comments')
+              .row
+                .comment-text.col.s12.l11.offset-s1
+                  p
+                    | I’m just testing the comment section. I really like this car. I especially like the fact that it only costs $3M. That’s amazing.
+    // Bottom Banner
+    // DESKTOP
+    #bottom-banner.section.no-pad-bot.valign-wrapper.hide-on-med-and-down(style="clip-path: url('#clip-bottom');")
+      #bottom-banner-content.center-block
+        h1.text_h.center.header.banner-title.letters.type
+          span
+            b Get Your STRV M6
+        h4.text_h.center.banner-subtitle
+          span
+            | Simply designy car for designers
+        a.waves-effect.center.waves-light.btn-large.z-depth-0.button(href='#how-it-works')
+          | BUILD YOUR OWN
+          img.arrow-icon(src='arrow-icn.svg')
+    // Medium
+    #bottom-banner-medium.section.no-pad-bot.valign-wrapper.show-on-medium.hide-on-small-only.hide-on-large-only(style="clip-path: url('#clip-bottom');")
+      #bottom-banner-medium-content.center-block
+        h1.text_h.center.header.banner-title-medium.letters.type
+          span
+            b Get Your STRV M6
+        h4.text_h.center.banner-subtitle
+          span
+            | Simply designy car for designers
+        a.waves-effect.center.waves-light.btn-large.z-depth-0.button(href='#how-it-works')
+          | BUILD YOUR OWN
+          img.arrow-icon(src='arrow-icn.svg')
+    // Mobile
+    #bottom-banner-mobile.section.no-pad-bot.valign-wrapper.hide-on-med-and-up(style="clip-path: url('#clip-bottom-mobile');")
+      #bottom-banner-mobile-content.center-block
+        h1.text_h.center.header.banner-title-medium.letters.type
+          span
+            b Get Your STRV M6
+        h4.text_h.center.banner-subtitle
+          span
+            | Simply designy car
+            br
+            |  for designers
+        a.waves-effect.center.waves-light.btn-large.z-depth-0.button(href='#how-it-works')
+          | BUILD YOUR OWN
+          img.arrow-icon(src='arrow-icn.svg')
+    // end Bottom Banner
+    // Footer
+    footer.page-footer.default_color
+      #share-on.footer-copyright.default_color
+        .container.valign-wrapper.share-on-container
+          .center-block
+            h5.social SHARE ON
+            img.social-icon(src='icn-facebook.svg', alt='facebook-icon', width='28px', height='28px')
+            img.social-icon(src='icn-twitter.svg', alt='twitter-icon', width='28px', height='28px')
+    // Import jQuery before materialize.js
+    script(src='https://code.jquery.com/jquery-3.1.0.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js')
+    script(src='strv.js')

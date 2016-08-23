@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>STRV M6</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link rel="stylesheet" href="strv.css">
+    <meta charset="UTF-8">
+    <!--Website optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  </head>
+  <body>
+
+    <!-- Clip paths for non-square divs-->
+    <svg width="0" height="0" >
+        <defs>
+
+
+            <clipPath id="clip-index" clipPathUnits="objectBoundingBox">
+                <polygon points='0,0 1,0 1,0.773 0.349,1 0,0.76 0,0' />
+            </clipPath>
+            <clipPath id="clip-index-mobile" clipPathUnits="objectBoundingBox">
+              <polygon points='0,0 1,0 1,0.953 0.249,1 0,0.97'/>
+            </clipPath>
+            <clipPath id="clip-bottom" clipPathUnits="objectBoundingBox">
+                <polygon points='0,0.017 0.34,0.237 1,0 1,1 0,1' />
+            </clipPath>
+            <clipPath id="clip-bottom-mobile" clipPathUnits="objectBoundingBox">
+                <polygon points='0,0.016 0.25,0.05 1,0 1,1 0,1' />
+            </clipPath>
+            <clipPath id="clip-how-it-works" clipPathUnits="objectBoundingBox">
+                <polygon points='0,0.01 0.34,0.16 1,0 1,1 0,1 ' />
+            </clipPath>
+        </defs>
+    </svg>
+    <!-- Navigation bar-->
+    <nav class="pushpin-nav-bar">
+      <div class="nav-wrapper">
+        <!--Desktop Navigation-->
+        <ul class="hide-on-med-and-down">
+          <li><a class="li-no-hover" href="#about-us">ABOUT US</a></li>
+          <li><a href="#how-it-works">HOW IT WORKS</a></li>
+          <li><a href="#comments">COMMENTS</a></li>
+        </ul>
+        <!--Mobile Navigation-->
+        <a href="#" data-activates="mobile-menu" class="right button-collapse"><i class="material-icons">menu</i></a>
+        <div >
+          <ul class="side-nav center" id="mobile-menu">
+            <li><a href="#about-us">ABOUT US</a></li>
+            <li><a href="#how-it-works">HOW IT WORKS</a></li>
+            <li><a href="#comments">COMMENTS</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--INDEX BANNER -->
+    <!--DESKTOP-->
+    <div class="section no-pad-bot valign-wrapper hide-on-med-and-down" id="index-banner"  style="clip-path: url('#clip-index');">
+      <div id="index-banner-content" class="center-block">
+        <h1 class="text_h center header banner-title letters type">
+          <span>
+          <b >New STRV M6</b>
+          </span>
+        </h1>
+        <h4 class="text_h center banner-subtitle">
+          <span>
+          Simply designy car for designers
+          </span>
+        </h4>
+        <a class="waves-effect center waves-light btn-large z-depth-0 button" href="#comments">LEAVE A COMMENT<img src="public/arrow-icn.svg" class="arrow-icon"/></a>
+      </div>
+      <div id="new-strv">
+        <img id="new-strv-watermark"src="public/NEW-STRV.png" alt="new-strv-watermark">
+      </div>
+    </div>
+    <!--MEDIUM-->
+    <div class="section no-pad-bot valign-wrapper hide-on-small-only hide-on-large-only show-on-medium" id="index-banner-medium"  style="clip-path: url('#clip-index');">
+      <div id="index-banner-medium-content" class="center-block">
+        <h1 class="text_h center header banner-title-medium letters type">
+          <span>
+          <b >New STRV M6</b>
+          </span>
+        </h1>
+        <h4 class="text_h center banner-subtitle">
+          <span>
+          Simply designy car for designers
+          </span>
+        </h4>
+        <a class="waves-effect center waves-light btn-large z-depth-0 button" href="#comments">LEAVE A COMMENT<img src="public/arrow-icn.svg" class="arrow-icon"/></a>
+      </div>
+      <div id="new-strv" class="hide-on-med-and-down">
+        <img id="new-strv-watermark"src="public/NEW-STRV.png" alt="new-strv-watermark">
+      </div>
+    </div>
+    <!--MOBILE-->
+    <div class="section no-pad-bot valign-wrapper hide-on-med-and-up" id="index-banner-mobile"  style="clip-path: url('#clip-index-mobile');">
+      <div id="index-banner-content-mobile" class="center-block">
+        <h1 class="text_h center header banner-title letters type">
+          <span>
+          <b >New </br> STRV </br> M6</b>
+          </span>
+        </h1>
+        <h4 class="text_h center banner-subtitle">
+          <span>
+          Simply designy car </br> for designers
+          </span>
+        </h4>
+        <a class="waves-effect center waves-light btn-large z-depth-0 button" href="#comments">LEAVE A COMMENT<img src="public/arrow-icn.svg" class="arrow-icon"/></a>
+      </div>
+    </div>
+
+
+
+    <!-- ABOUT US section -->
+    <div id="about-us" class="section scrollspy">
+      <div class="section-title" id="title-about-us">
+        <h6 class="section-number">01</h6>
+        <h6 class="section-name">ABOUT US</h6>
+        <div class="red-stripe hide-on-med-and-down">
+        </div>
+      </div>
+      <!--Desktop Handmade img-->
+      <div id="handmade-container" class="hide-on-med-and-down">
+        <img src="public/handmade.svg" alt="handmade" id="handmade"/>
+      </div>
+      <!--MOBILE Handmade img-->
+      <div  id="handmade-mobile-container" class="hide-on-large-only">
+        <img src="public/handmade-mobile.svg" alt="handmadeMobile" id="handmade-mobile"/>
+      </div>
+      <!--Desktop-->
+      <div class="container hide-on-med-and-down" id="about-us-container">
+        <div id="about-us-card" class="card z-depth-2">
+          <div class="row card-content">
+            <div class="col s4 about-us-info center">
+
+                <img class="brush-icon" src="public/brush.svg"/>
+                <div class="about-us-text-container first-text-container">
+                  <p class="caption">Designed by <br/> 10 STRV Designers</p>
+                  <p class="about-us-text light">Every piece of this car is handmade. Our all 10 designers check Pinterest, Dribbble and Behance for inspirations and did this awesome car!</p>
+                </div>
+
+            </div>
+            <div class="about-us-divider"></div>
+            <div class="about-us-info center col s4">
+
+                <img class="leaf-icon" src="public/leaf.svg"/>
+                <div class="about-us-text-container">
+                  <p class="caption">Nature Handcarft <br/> Materials </p>
+                  <p class="about-us-text light">We using natural recycable materials like wood from our forest or co-operate with DannyP brand and his awesome leather stuff.</p>
+                </div>
+
+            </div>
+            <div class="about-us-divider"></div>
+            <div class="about-us-info center col s4">
+
+                <img class="heart-icon" src="public/heart.svg"/>
+                <div class="about-us-text-container last-text-container">
+                  <p class="caption">Only 20 pieces <br/> in the World!</p>
+                  <p class="about-us-text light">Designer is a human, right? Handmade things takes a lot of time and energy. Every designer have 2 cars in his pocket. So hurry up!</p>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--MOBILE-->
+      <div id="about-us-mobile-container" class="container hide-on-large-only">
+        <div class="card z-depth-2">
+          <div class="card-content">
+            <div class="row">
+              <div class="about-us-mobile-info center">
+                <img class="brush-icon" src="public/brush.svg"/>
+                <div class="about-us-text-mobile-container">
+                  <p class="about-us-mobile-caption mobile-caption flow-text">Designed by <br/> 10 STRV Designers</p>
+                  <p class="about-us-mobile-text light flow-text">Every piece of this car is handmade. Our all 10 designers check Pinterest, Dribbble and Behance for inspirations and did this awesome car!</p>
+                </div>
+              </div>
+            </div>
+            <div class="about-us-mobile-divider"></div>
+            <div class="row">
+              <div class="about-us-mobile-info center">
+                <img class="leaf-icon" src="public/leaf.svg"/>
+                <div class="about-us-text-mobile-container">
+                  <p class="about-us-mobile-caption mobile-caption flow-text">Nature Handcarft <br/> Materials </p>
+                  <p class="about-us-mobile-text light flow-text">We using natural recycable materials like wood from our forest or co-operate with DannyP brand and his awesome leather stuff.</p>
+                </div>
+              </div>
+            </div>
+            <div class="about-us-mobile-divider"></div>
+            <div class="row">
+              <div class="about-us-mobile-info center">
+                <img class="heart-icon" src="public/heart.svg"/>
+                <div class="about-us-text-mobile-container last-text-container">
+                  <p class="about-us-mobile-caption mobile-caption flow-text">Only 20 pieces <br/> in the World!</p>
+                  <p class="about-us-mobile-text light flow-text">Designer is a human, right? Handmade things takes a lot of time and energy. Every designer have 2 cars in his pocket. So hurry up!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--How it Works-->
+    <div id="how-it-works-bg" class="hide-on-med-and-down" style="clip-path: url('#clip-how-it-works');">
+    </div>
+    <div id="how-it-works-mobile-bg" class="hide-on-med-and-up">
+    </div>
+    <div class="section scrollspy" id="how-it-works">
+      <div class="section-title" id="title-how-it-works">
+        <h6 class="section-number">02</h6>
+        <h6 class="section-name">HOW IT WORKS</h6>
+        <div class="red-stripe hide-on-med-and-down">
+        </div>
+      </div>
+      <div id="how-it-works-container" class="container">
+        <!--Desktop-->
+        <div class="row center hide-on-med-and-down">
+          <div class="col l4 how-it-works-step">
+            <div class="how-it-works-step-number">
+              <span>1</span>
+            </div>
+            <div  class="how-it-works-step-caption caption">
+              <p>Pick Your <br/> Favourite Designer</p>
+            </div>
+          </div>
+          <div class="how-it-works-divider"></div>
+
+          <div class="col l4 how-it-works-step">
+              <div class="how-it-works-step-number">
+                <span>2</span>
+              </div>
+              <div  class="how-it-works-step-caption caption">
+                <p>Give Him $3M <br/> in Fancy Suitcase</p>
+            </div>
+          </div>
+          <div class="how-it-works-divider"></div>
+          <div class="col l4 how-it-works-step">
+              <div class="how-it-works-step-number">
+                <span>3</span>
+              </div>
+              <div  class="how-it-works-step-caption caption">
+                <p>Wait for the <br/> Masterpiece</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Mobile-->
+        <div class="row center hide-on-large-only">
+          <div class="col s12 how-it-works-mobile-step">
+            <div class="how-it-works-mobile-step-number">
+              <span>1</span>
+            </div>
+            <div  class="how-it-works-mobile-step-caption mobile-caption">
+              <p>Pick Your <br/> Favourite Designer</p>
+            </div>
+          </div>
+          <div class="how-it-works-mobile-divider"></div>
+          <div class="col s12 how-it-works-mobile-step">
+              <div class="how-it-works-mobile-step-number">
+                <span>2</span>
+              </div>
+              <div  class="how-it-works-mobile-step-caption mobile-caption">
+                <p>Give Him $3M <br/> in Fancy Suitcase</p>
+            </div>
+          </div>
+          <div class="how-it-works-mobile-divider"></div>
+          <div class="col s12 l4 how-it-works-mobile-step">
+              <div class="how-it-works-mobile-step-number">
+                <span>3</span>
+              </div>
+              <div  class="how-it-works-mobile-step-caption mobile-caption">
+                <p>Wait for the <br/> Masterpiece</p>
+            </div>
+          </div>
+        </div>
+        <div class="row center">
+          <a class="waves-effect center waves-light btn-large z-depth-0 button">CHOOSE YOUR DESIGNER<img src="public/arrow-icn.svg" class="arrow-icon"/></a>
+        </div>
+        <div>
+          <div class="row center hide-on-med-and-down bmw-image-section">
+            <img class="s12" id="STRV-watermark" src="public/STRV M6.svg"/>
+            <img class="s12" id="bmw-image" src="public/image-bmw.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--COMMENTS-->
+    <div class="section scrollspy" id="comments">
+      <div class="section-title" id="title-comments">
+        <h6 class="section-number">03</h6>
+        <h6 class="section-name">COMMENTS</h6>
+        <div class="red-stripe hide-on-med-and-down">
+        </div>
+      </div>
+      <div class="container" id="comment-section-container">
+        <div class="row section">
+
+
+          <div class="col s12 card" id="comment-field">
+            <div class="hide-on-small-only">
+              <div class="col m1 push-m1 avatar" id="commenting-avatar">
+                <img src="public/Avatar.png" />
+              </div>
+              <input class="col m9 push-m1" id="comment-textbox" type="text" name="name" placeholder="Write your comment here..."></input>
+              <div class="col m1 push-m1">
+                <button  id="send-button" class="btn-flat waves-effect  waves-light btn-floating click-to-toggle btn-large " type="submit"></button>
+              </div>
+            </div>
+            <div class="hide-on-med-and-up">
+              <div class="center-align row" id="commenting-avatar-mobile">
+                <img src="public/Avatar.png" />
+              </div>
+              <div class="row center-align">
+                <input class="col s10 push-s1 center-align" id="comment-textbox-mobile" type="text" name="name" placeholder="Write your comment here..."></input>
+              </div>
+              <div class="row center-align">
+                <button  id="send-button-mobile" class="btn-flat waves-effect  waves-light btn-floating center-align btn-large " type="submit"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s7 hide-on-small-only">
+            <span id="comment-number">3 Comments</span>
+          </div>
+          <div class="center-align hide-on-med-and-up">
+            <span id="comment-number-mobile">3 Comments</span>
+          </div>
+        </div>
+        <div class="row section">
+          <div class="col s12 m9 card z-depth-1 push-m1 comment-card">
+            <div class="comment">
+              <div class="row">
+                <div class="col s1 avatar ">
+                  <img src="public/Avatar.png" />
+                </div>
+                <div class="comment-tag col s7">
+                  <div class=" commenter-name">
+                    <span>Saul Goodman</span>
+                  </div>
+                  <div class=" comment-time">
+                    <span>4 days</span>
+                  </div>
+                </div>
+                <a href="#" class="right reply-icon">
+                </a>
+              </div>
+              <div class="row">
+                <div class="comment-text col s12 l11 offset-s1">
+                  <p>I’m just testing the comment section. I really like this car. I especially like the fact that it only costs $3M. That’s amazing.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m8 card push-m2 thread-comment-card">
+            <div class="comment">
+              <div class="row">
+                <div class="col s1 avatar">
+                </div>
+                <div class="comment-tag col s7">
+                  <div class=" commenter-name">
+                    <span>Saul Goodman</span>
+                  </div>
+                  <div class=" comment-time">
+                    <span>4 days</span>
+                  </div>
+                </div>
+                <a href="#"  class="right reply-icon">
+                </a>
+              </div>
+              <div class="row">
+                <div class="comment-text col s12 l9 offset-s1">
+                  <p>I’m just testing the comment section. I really like this car. I especially like the fact that it only costs $3M. That’s amazing.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m9 card z-depth-1 push-m1 comment-card">
+            <div class="comment">
+              <div class="row">
+                <div class="col s1 avatar ">
+                  <img src="public/Avatar.png" />
+                </div>
+                <div class="comment-tag col s7">
+                  <div class=" commenter-name">
+                    <span>Saul Goodman</span>
+                  </div>
+                  <div class=" comment-time">
+                    <span>4 days</span>
+                  </div>
+                </div>
+                <a href="#comments" class="right reply-icon">
+                </a>
+              </div>
+              <div class="row">
+                <div class="comment-text col s12 l11 offset-s1">
+                  <p>I’m just testing the comment section. I really like this car. I especially like the fact that it only costs $3M. That’s amazing.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--Bottom Banner-->
+    <!--DESKTOP-->
+    <div class="section no-pad-bot valign-wrapper hide-on-med-and-down" id="bottom-banner"  style="clip-path: url('#clip-bottom');">
+      <div id="bottom-banner-content" class="center-block">
+        <h1 class="text_h center header banner-title letters type">
+          <span>
+          <b >Get Your STRV M6</b>
+          </span>
+        </h1>
+        <h4 class="text_h center banner-subtitle">
+          <span>
+          Simply designy car for designers
+          </span>
+        </h4>
+        <a class="waves-effect center waves-light btn-large z-depth-0 button" href="#how-it-works">BUILD YOUR OWN<img src="public/arrow-icn.svg" class="arrow-icon"/></a>
+      </div>
+    </div>
+    <!--Medium-->
+    <div class="section no-pad-bot valign-wrapper show-on-medium hide-on-small-only hide-on-large-only" id="bottom-banner-medium"  style="clip-path: url('#clip-bottom');">
+      <div id="bottom-banner-medium-content" class="center-block">
+        <h1 class="text_h center header banner-title-medium letters type">
+          <span>
+          <b >Get Your STRV M6</b>
+          </span>
+        </h1>
+        <h4 class="text_h center banner-subtitle">
+          <span>
+          Simply designy car for designers
+          </span>
+        </h4>
+        <a class="waves-effect center waves-light btn-large z-depth-0 button" href="#how-it-works">BUILD YOUR OWN<img src="public/arrow-icn.svg" class="arrow-icon"/></a>
+      </div>
+    </div>
+    <!--Mobile-->
+    <div class="section no-pad-bot valign-wrapper hide-on-med-and-up" id="bottom-banner-mobile"  style="clip-path: url('#clip-bottom-mobile');">
+      <div id="bottom-banner-mobile-content" class="center-block">
+        <h1 class="text_h center header banner-title-medium letters type">
+          <span>
+          <b >Get Your STRV M6</b>
+          </span>
+        </h1>
+        <h4 class="text_h center banner-subtitle">
+          <span>
+          Simply designy car</br> for designers
+          </span>
+        </h4>
+        <a class="waves-effect center waves-light btn-large z-depth-0 button" href="#how-it-works">BUILD YOUR OWN<img src="public/arrow-icn.svg" class="arrow-icon"/></a>
+      </div>
+    </div>
+    <!--end Bottom Banner-->
+    <!--Footer-->
+    <footer  class="page-footer default_color">
+      <div id=share-on class="footer-copyright default_color">
+        <div class="container valign-wrapper share-on-container">
+          <div class="center-block">
+            <h5 class="social">SHARE ON</h5>
+            <img class="social-icon" src="public/icn-facebook.svg" alt="facebook-icon" width="28px" height="28px">
+            <img class="social-icon" src="public/icn-twitter.svg" alt="twitter-icon" width="28px" height="28px">
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--Import jQuery before materialize.js-->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src="strv.js"></script>
+  </body>
+</html>

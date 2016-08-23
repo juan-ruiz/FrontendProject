@@ -1,0 +1,21 @@
+{
+  "name": "STRV_M6",
+  "version": "0.1.0",
+  "description": "Landing page for the new STRV M6",
+  "dependencies": {
+    "express": "^4.14.0",
+    "materialize-css": "^0.97.7",
+    "pug": "^2.0.0-beta5"
+  },
+  "devDependencies": {
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "build": "gulp"
+  }
+}
