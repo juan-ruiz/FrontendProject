@@ -5,6 +5,18 @@
  *               data and events that are going to bee used on the page.
  *
  */
+// var $ = jQuery = require('jquery');
+// require('../node_modules/materialize-css/js/initial.js');
+// require('../node_modules/materialize-css/js/jquery.easing.1.3.js');
+// require('../node_modules/materialize-css/js/hammer.min.js');
+// require('../node_modules/materialize-css/js/buttons.js');
+// require('../node_modules/materialize-css/js/scrollSpy.js');
+// require('../node_modules/materialize-css/js/sideNav.js');
+// require('../node_modules/materialize-css/js/waves.js');
+// require('../node_modules/materialize-css/js/pushpin.js');
+
+
+
 
 $(document).ready(function() {
   //Initializing materialize-css plugins
@@ -90,5 +102,5 @@ $(document).ready(function() {
    *its son comments so they can be printed right below it. This is done for all
    *comments on the file.
    */
-   
+
 });

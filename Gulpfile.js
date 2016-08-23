@@ -21,10 +21,10 @@ gulp.task('assets', function(){
 })
 
 gulp.task('scripts', function(){
-  browserify('./src/strv_init.js')
+  browserify('./src/strv_master.js')
     .transform(babel)
     .bundle()
-    .pipe(source('strv_init.js'))
+    .pipe(source('./src/strv_master.js'))
     .pipe(rename('strv.js'))
     .pipe(gulp.dest('public'));
 })
