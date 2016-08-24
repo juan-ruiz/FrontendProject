@@ -1,91 +1,49 @@
-body, html {
+/**
+ *  Author      : Juan Sebastian Ruiz
+ *  Description : Here are all the custom rulesets regarding the desktop
+ *                version of the website, this being, devices with a viewport
+ *                width bigger than 1000px. This file also contains the
+ *                rulesets for the general look and feel of the website
+ *
+ *
+ * CONTENTS
+ *
+ *  SETTINGS
+ *  GLOBAL.................Globally-available variables and config.
+ *
+ *
+ *  COMPONENTS
+ *   #NAVIGATION............The page's navbar.
+ *   #INDEX BANNER..........Banner at the top of the page
+ *   #ABOUT US..............About us section
+ *   #HOW IT WORKS..........How it works section, steps to acquire an strv m6
+ *   #COMMENTS..............Comment section
+ *   #BOTTOM BANNER.........Banner shown after the comment section
+ *   #FOOTER................Page's footer
+ */
+
+
+
+
+
+/**************************************
+ *  #GLOBAL                           *
+ **************************************/
+
+
+body,
+html {
     overflow-x: hidden;
 }
-svg {
-    position: absolute;
-}
-
-/*Page Navigation*/
-
-nav {
-    position: absolute;
-    z-index: 20;
-    top: 2rem;
-    box-shadow: none;
-    background-color: transparent;
-}
-@keyframes bgcolor-pinned {
-    from {
-        background-color: transparent;
-    }
-    to {
-        background-color: #5B5360;
-    }
-}
-@keyframes bgcolor-unpin {
-    from {
-        background-color: #5B5360;
-    }
-    to {
-        background-color: transparent;
-    }
-}
-.pin-top {
-    background-color: transparent;
-    position: absolute;
-    z-index: 20;
-    top: 2rem !important;
-    animation-name: bgcolor-unpin;
-    animation-duration: 0.01s;
-}
-.pinned {
-    position: fixed;
-    top: 0;
-    background-color: #5B5360;
-    animation-name: bgcolor-pinned;
-    animation-duration: 0.3s;
-}
-nav ul {
-    position: relative;
-    left: 37vw;
-}
-nav ul .active {
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    border-bottom-color: red !important;
-}
-.side-nav-menu {
-    width: 100vw;
-    max-width: 100%;
-}
-#sidenav-overlay {
-    z-index: -1;
-}
-nav ul a {
-    display: inline-block;
-}
-nav ul li:hover {
-    background-color: transparent !important;
-}
-nav ul a:hover {
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    border-bottom-color: red !important;
-    transition: border 0.05s linear !important;
-}
-.side-nav {
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
-}
-
-/*end Navigation*/
 
 
-/*Section-General-Elements*/
+svg{
+  position: absolute;
+}
 
 
-/*Text Elements*/
+/*Banner settings*/
+
 
 .banner-title {
     font-size: 100px;
@@ -98,42 +56,35 @@ nav ul a:hover {
     letter-spacing: -2px;
     margin-bottom: 15.5px;
 }
+
 .banner-subtitle {
     font-size: 21px;
     font-style: normal;
     margin-bottom: 70px;
 }
-.caption {
-    font-size: 1.7rem;
-    font-weight: 500;
-    text-align: left;
-}
-
-.mobile-caption {
-    font-size: 1.7rem;
-    font-weight: 500;
-    text-align: center;
-}
-/*end Text Elements*/
 
 
-/*Section Title*/
+/*Section title settings*/
+
 
 .section-title {
     position: relative;
     z-index: 2;
     left: 16.66667vw;
 }
+
 .section-number {
-    color: #CECED2 !important;
+    color: #CECED2;
     font-size: 22px;
     font-weight: bold;
 }
+
 .section-name {
     color: #151416;
     font-size: 22px;
     font-weight: bold;
 }
+
 .red-stripe {
     height: 5.5vw;
     width: 5px;
@@ -141,10 +92,19 @@ nav ul a:hover {
     border-width: 3px;
 }
 
-/*end Section Title*/
+
+/*Caption settings*/
 
 
-/*Red Button*/
+.caption {
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+
+/*Button settings*/
+
 
 .button {
     height: 60px;
@@ -156,21 +116,102 @@ nav ul a:hover {
     padding-right: 14.7px;
     text-align: left;
 }
+
 .button:hover {
     background-color: #FF595E;
 }
+
 .arrow-icon {
     margin-left: 45px;
 }
 
-/*end Red Button*/
 
 
-/*end Section-General-Elements*/
 
 
-/*Index Banner*/
-/*Desktop*/
+/**************************************
+  *  #NAVIGATION                       *
+  **************************************/
+
+
+nav {
+    position: absolute;
+    z-index: 20;
+    top: 2rem;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+nav ul {
+    position: relative;
+    left: 37vw;
+}
+
+nav ul .active {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: red;
+}
+
+nav ul a:hover {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: red;
+    transition: border 0.05s linear;
+}
+
+
+/**
+  *The navbar is set to be pinned to the top of the page after the user has
+  *scrolled below it (so it stays visible), the styles for for when the user
+  *is above or below that threshold are specified in pin-top and pinned classes
+  *respectively, also there is an animation set for the transition.
+  **/
+
+
+.pin-top {
+    background-color: transparent;
+    position: absolute;
+    z-index: 20;
+    margin-top: 2.134rem;
+    animation-name: bgcolor-unpin;
+    animation-duration: 0.01s;
+}
+
+.pinned {
+    position: fixed;
+    top: 0;
+    background-color: #5B5360;
+    animation-name: bgcolor-pinned;
+    animation-duration: 0.3s;
+}
+
+@keyframes bgcolor-pinned {
+    from {
+        background-color: transparent;
+    }
+    to {
+        background-color: #5B5360;
+    }
+}
+
+@keyframes bgcolor-unpin {
+    from {
+        background-color: #5B5360;
+    }
+    to {
+        background-color: transparent;
+    }
+}
+
+
+
+
+
+/**************************************
+ *  #INDEX  BANNER                    *
+ **************************************/
+
 
 #index-banner {
     position: relative;
@@ -187,114 +228,101 @@ nav ul a:hover {
     background-size: cover;
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 77.3%, 34.9% 100%, 0% 76%);
 }
+
 #index-banner-content {
     position: relative;
     color: white;
     text-align: center;
 }
+
 #new-strv-watermark {
     position: absolute;
     bottom: 1vw;
     left: 5vw;
     height: 13vw;
 }
-/*end Desktop*/
-/*Medium*/
-#index-banner-medium{
-    position: relative;
-    height: 65.29vw;
-    width: 100vw;
-    max-width: 100%;
-    background-image: url("index-banner.png");
-    background-color: #615966;
-    background-blend-mode: multiply;
-    position: relative;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 77.3%, 34.9% 100%, 0% 76%);
-}
-#index-banner-medium-content {
-  margin-top: 10vw;
-    color: white;
-    text-align: center;
-}
-/*end Medium*/
-
-/*Mobile*/
-#index-banner-mobile{
-    position: relative;
-    height: 638px;
-    width: 100vw;
-    max-width: 100%;
-    background: url("index-banner-mobile.png") center;
-    background-color: #615966;
-    background-blend-mode: multiply;
-    position: relative;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 94.5%, 24.9% 100%, 0% 97%);
-}
-#index-banner-content-mobile{
-    color: white;
-    text-align: center;
-}
-/*end Mobile*/
-
-/*end Index Banner*/
 
 
-/*About Us*/
-/*Desktop*/
+
+
+
+/**************************************
+ *  #ABOUT  US                        *
+ **************************************/
+
+
 #about-us {
     position: relative;
     min-height: 752px;
 }
+
 #title-about-us {
     position: relative;
     margin-top: 4.9vw;
 }
-#handmade-container{
-  margin-top: -3vw;
-  margin-left: 10.24vw;
+
+
+#handmade-container {
+    margin-top: -3vw;
+    margin-left: 10.24vw;
 }
+
 #handmade {
     width: 80.4vw;
     height: 11.31vw;
 }
+
+
 #about-us-container {
     margin-top: -31px;
     width: 76vw;
 }
+
 #about-us-card {
-    padding-left:  6vw;
+    padding-left: 6vw;
     padding-right: 0;
 }
+
+
+/**
+ *Icon classes are handled separately to meet the design to the pixel, and to
+ *address the difference between their sizes.
+ **/
+
+
 .brush-icon {
     width: 72px;
     margin-top: 59px;
 }
+
 .leaf-icon {
     width: 68.6px;
     height: 65.6px;
     margin-top: 49.7px;
     margin-bottom: 5px;
 }
+
 .heart-icon {
     width: 48.6px;
     height: 65.6px;
     margin-top: 56.1px;
 }
+
+
+/*
+ *Here are the rulesets for the card container of the about us section
+ */
+
+
 .about-us-info {
-  width: 30% !important;
+    width: 30% !important;
 }
+
 .about-us-text-container {
     margin-top: 5vw;
     margin-bottom: 6vw;
 }
+
 .about-us-text {
     font-size: 1.1rem;
     color: #9A9A9A !important;
@@ -303,63 +331,26 @@ nav ul a:hover {
     font-weight: 400;
     line-height: 32px;
     margin-top: 30px !important;
-
-}
-.about-us-divider{
-  width: 1px;
-  float: left;
-  height: 250px;
-  background-color: #E7E7E7;
-  margin-top: 220px;
-  margin-right:  3vw;
-
 }
 
-/*Mobile*/
-
-#handmade-mobile {
-    width: 91.1vw;
-    height: 56.6vw;
+.about-us-divider {
+    width: 1px;
+    float: left;
+    height: 250px;
+    background-color: #E7E7E7;
+    margin-top: 220px;
+    margin-right: 3vw;
 }
 
-#handmade-mobile-container{
-    margin-left: 5vw;
-    margin-top: 50.7px;
-}
-
-#about-us-mobile-container{
-  margin-top: -30px;
-  width: 93.4vw;
-}
-
-.about-us-mobile-divider{
-  height: 1px;
-  background-color: #E7E7E7;
-  width: 76.033%;
-  margin-left: 11.9%;
-
-}
-.about-us-text-mobile-container{
-margin-top: 30px;
-margin-bottom: 46.4px;
-}
-.about-us-mobile-caption{
-  margin-top: 31px;
-}
-.about-us-mobile-text{
-  margin-top: 36.3px !important;
-  color: #9A9A9A !important;
-  max-width: 85%;
-  margin-left: 7% !important;
-  font-weight: 400;
-  line-height: 29px !important;
-
-}
-/*end About Us*/
 
 
-/*How it Works*/
-/*Desktop*/
+
+
+/**************************************
+ *  #HOW  IT  WORKS                   *
+ **************************************/
+
+
 #how-it-works-bg {
     width: 100vw;
     height: 1330px;
@@ -369,24 +360,35 @@ margin-bottom: 46.4px;
     top: 105vw;
     -webkit-clip-path: polygon(0% 0.9%, 34.7% 16.1%, 100% 0%, 100% 100%, 0% 100%);
 }
+
+
 #title-how-it-works {
     position: relative;
     margin-top: 125px;
 }
+
+
 #how-it-works-container {
     width: 76vw;
     margin-top: 45px;
 }
-@media only screen and (min-width: 1000px){
-  .how-it-works-step {
-  width: 31%!important;
-  }
+
+#how-it-works-row {
+    padding-left: 6.6%;
 }
+
+@media only screen and (min-width: 1000px) {
+    .how-it-works-step {
+        width: 31%!important;
+    }
+}
+
 .how-it-works-step-caption {
     position: relative;
     margin-left: 4vw;
     z-index: 4;
 }
+
 .how-it-works-step-number {
     position: relative;
     z-index: -1;
@@ -396,83 +398,65 @@ margin-bottom: 46.4px;
     font-weight: bold;
     color: #E3E3E3;
 }
-.how-it-works-divider{
-  width: 1px;
-  float: left;
-  height: 122px;
-  background-color: #E7E7E7;
-  margin-right:  10px;
-  margin-left: 10px;
-  margin-top: 30px;
+
+.how-it-works-divider {
+    width: 1px;
+    float: left;
+    height: 122px;
+    background-color: #E7E7E7;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 30px;
 }
+
+
 #bmw-image {
     margin-top: -6.86vw;
 }
+
+
 .bmw-image-section {
     position: relative;
     top: 4.86vw;
     left: -2vw;
 }
 
-/*end Desktop*/
-
-/*Mobile*/
-
-#how-it-works-mobile-bg {
-    width: 100vw;
-    height: 1440px;
-    background-color: #F8F8F8;
-    position: absolute;
-    z-index: -1;
-    top: 2060px;
-    -webkit-clip-path: polygon(0% 0.9%, 34.7% 16.1%, 100% 0%, 100% 100%, 0% 100%);
-}
-.how-it-works-mobile-step-caption {
-    z-index: 1;
-}
-.how-it-works-mobile-step-number {
-    z-index: -1;
-    margin-bottom: -120px;
-    font-size: 122px;
-    font-weight: bold;
-    color: #E3E3E3;
-}
-.how-it-works-mobile-divider{
-  width: 37vw;
-  float: left;
-  height: 1px;
-  background-color: #E7E7E7;
-  margin-top: 52px;
-  margin-bottom: 29px;
-  margin-left: 25%;
-}
-
-/*end Mobile*/
-/*end How it Works*/
 
 
-/*Comments*/
-/*Desktop*/
+
+
+/**************************************
+ *  #COMMENTS                         *
+ **************************************/
+
+
+ #title-comments {
+     position: relative;
+     margin-top: 8.6vw;
+ }
+
+
 #comments {
     padding-bottom: 2rem;
 }
-#title-comments {
-    position: relative;
-    margin-top: 8.6vw;
-}
+
 #comment-section-container {
     position: relative;
     left: 2.9vw;
     top: 62.4px;
 }
+
+
 #comment-field {
     width: 93.45%;
 }
+
 #commenting-avatar {
     margin-top: 19px;
     margin-bottom: 16.6px;
     margin-left: -25px;
 }
+
 #comment-textbox {
     margin-top: 40px;
     margin-bottom: 20px;
@@ -486,71 +470,100 @@ margin-bottom: 46.4px;
     color: #9A9A9A;
     bottom: 30px;
 }
+
 :-moz-placeholder {
     /* Firefox 18- */
+
     color: #9A9A9A;
     opacity: 1;
     bottom: 30px;
 }
+
 ::-moz-placeholder {
     /* Firefox 19+ */
+
     color: #9A9A9A;
     opacity: 1;
     top: 30px;
 }
+
 :-ms-input-placeholder {
     color: #9A9A9A;
     bottom: 30px;
 }
-.red-placeholder::-moz-placeholder, .red-placeholder:-moz-placeholder {
+
+.red-placeholder::-moz-placeholder,
+.red-placeholder:-moz-placeholder {
     color: #E43B40;
 }
+
 .red-placeholder::-webkit-input-placeholder {
     color: #E43B40;
 }
+
 .red-placeholder::-ms-input-placeholder {
     color: #E43B40;
 }
+
+
 #send-button {
     margin-left: -55px;
     margin-top: 25px;
     background: url("icn-send.svg") center no-repeat;
-
 }
+
 #send-button:hover {
     background-color: transparent;
     background: url("icn-send-hover.svg") center no-repeat
 }
-.send-button-error{
+
+.send-button-error {
     background: url("icn-send-error.svg") center no-repeat !important;
 }
+
+
 #comment-number {
     font-size: 2rem;
     font-weight: 300;
     margin-left: 80px;
 }
 
+
 .comment {
     margin-left: 10px;
     margin-top: 24px;
 }
-.comment-card{
-  max-width: 93.45%;
+
+.comment-card {
+    max-width: 93.45%;
 }
+
+.thread-comment-card {
+    border-left: #E43B40 solid;
+    border-width: 3px;
+    max-width: 93.45%;
+}
+
+
 .avatar {
     width: 70px !important;
 }
+
 .comment-tag {
     margin-top: 8px;
 }
+
 .commenter-name {
     color: #818181;
     font-size: 1.2rem;
 }
+
 .comment-time {
     color: #C2C2C2;
     font-size: 0.9rem;
 }
+
+
 .reply-icon {
     background: url("reply-icn.svg") center no-repeat;
     margin-right: 17.5px;
@@ -564,43 +577,24 @@ margin-bottom: 46.4px;
     width: 19px;
     height: 14px;
 }
+
+
 .comment-text {
     color: #9A9A9A;
     font-size: 1.1rem;
     max-width: 70vw;
-}
-.thread-comment-card {
-    border-left: #E43B40 solid;
-    border-width: 3px;
-    max-width: 93.45%;
-}
-/*end Desktop*/
-/*Mobile*/
-#commenting-avatar-mobile{
-  margin-top: 20px;
+    margin-left: 8.33% !important;
 }
 
-#comment-textbox-mobile {
-    font-size: 1.3rem;
-    border-color: #E7E7E7;
-}
-#send-button-mobile {
-  margin-top: -30px;
-    background: url("icn-send.svg") center no-repeat;
-}
-#send-button-mobile:hover {
-    background-color: transparent;
-    background: url("icn-send-hover.svg") center no-repeat
-}
-#comment-number-mobile {
-    font-size: 1.8rem;
-    font-weight: 300;
-    margin-left: -30px;
-}
-/*end Mobile*/
-/*end Comments*/
-/*Bottom Banner*/
-/*Desktop*/
+
+
+
+
+/**************************************
+ *  #BOTTOM  BANNER                    *
+ **************************************/
+
+
 #bottom-banner {
     position: relative;
     height: 54.65vw;
@@ -617,88 +611,23 @@ margin-bottom: 46.4px;
     -webkit-clip-path: polygon(0% 1.7%, 34% 23.7%, 100% 0%, 100% 100%, 0% 100%);
 }
 
+
 #bottom-banner-content {
     position: relative;
     top: 6.25vw;
     color: white;
     text-align: center;
 }
-/*Medium*/
-#bottom-banner-medium {
-  position: relative;
-  height: 54.65vw;
-  min-height: 380px;
-  width: 100vw;
-  max-width: 100%;
-  margin-top: 5vw;
-  background: url("bottom-banner.png") no-repeat;
-  background-color: #615966;
-  background-blend-mode: multiply;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -webkit-clip-path: polygon(0% 1.7%, 34% 23.7%, 100% 0%, 100% 100%, 0% 100%);
-}
-
-#bottom-banner-medium-content {
-  position: relative;
-  top:20%;
-  color: white;
-  text-align: center;
-}
-/*end Medium*/
-/*Mobile*/
-#bottom-banner-mobile {
-    position: relative;
-    height: 790px;
-    width: 100vw;
-    max-width: 100%;
-    margin-top: 5vw;
-    background: url("bottom-banner-mobile.png") center;
-    background-color: #615966;
-    background-blend-mode: multiply;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    -webkit-clip-path: polygon(0% 1.6%, 26.14% 5.2%, 100% 0%, 100% 100%, 0% 100%);
-}
-#bottom-banner-mobile-content {
-    position: relative;
-    top: 6.25vw;
-    color: white;
-    text-align: center;
-}
-
-/*end Mobile*/
-/*end Bottom Banner*/
 
 
-/*Page Footer*/
 
-#share-on {
-    background: #0B0B0D;
-    /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#0B0B0D, #252527);
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#0B0B0D, #252527);
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#0B0B0D, #252527);
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#0B0B0D, #252527);
-    min-height: 95px;
-}
-.share-on-container {
-    padding-top: 27px;
-}
-.social {
-    display: inline-block;
-    margin-right: 14px;
-}
-.social-icon {
-    margin-right: 11px;
-}
+
+
+/**************************************
+ *  #FOOTER                           *
+ **************************************/
+
+
 footer.page-footer {
     position: relative;
     overflow: none;
@@ -706,4 +635,27 @@ footer.page-footer {
     padding-top: 0px;
 }
 
-/*end Page Footer*/
+
+#share-on {
+    background: #0B0B0D;
+    background: -webkit-linear-gradient(#0B0B0D, #252527);
+    background: -o-linear-gradient(#0B0B0D, #252527);
+    background: -moz-linear-gradient(#0B0B0D, #252527);
+    background: linear-gradient(#0B0B0D, #252527);
+    min-height: 95px;
+}
+
+
+#share-on-container {
+    padding-top: 27px;
+}
+
+
+.social {
+    display: inline-block;
+    margin-right: 14px;
+}
+
+.social-icon {
+    margin-right: 11px;
+}

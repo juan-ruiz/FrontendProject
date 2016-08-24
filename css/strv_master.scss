@@ -1,3 +1,44 @@
+/*
+ *  Author: Juan Sebastian Ruiz Villa
+ *
+ *  Description: This is the Master stylesheet, it is the top level stylesheet
+ *               its purpose is to load the custom stylesheets (both desktop
+ *               and mobile) as well as loading the materialize loader for the
+ *               sass preprocessor to use in the build step
+ */
+
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available variables and config.
+ *
+ *
+ *
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ * BASE
+ * Headings.............H1–H6 styles.
+ *
+ * OBJECTS
+ * Wrappers.............Wrapping and constraining elements.
+ *
+ * COMPONENTS
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Buttons..............Button elements.
+ *
+ * TRUMPS
+ * Text.................Text helpers.
+ */
+
+
+
 @import "css/materialize_loader.scss";
 @import "css/strv_desktop.scss";
+@import "css/strv_medium.scss";
 @import "css/strv_mobile.scss";

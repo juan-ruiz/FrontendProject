@@ -1,0 +1,117 @@
+/**
+ *  Author      : Juan Sebastian Ruiz
+ *  Description : Here are all the custom rulesets regarding the version of the
+ *                website for medium devices, this being, devices with a
+ *                viewport width ranging from 600px => 1000px
+ *
+ *
+ * CONTENTS
+ *
+ *  COMPONENTS
+ *   #INDEX BANNER..........Banner at the top of the page
+ *   #BOTTOM BANNER.........Banner shown after the comment section
+ */
+
+
+/**
+ *  Given that a design for medium devices was not explicitly specified,
+ *  this site´s version for medium devices inherits several elements from both
+ *  the Desktop and the mobile versions.
+ *
+ *
+ *  The rulesets in this file are aimed at handling the height of both the
+ *  index and bottom banners, as well as the size of the fonts of their
+ *  contents. This, with the objective of the banners not taking the entire
+ *  screen space of the devices and also not being smaller that the conten
+ *  they need to show.
+
+ *
+ *  Inheritance:
+ *
+ *  Navigation.........................Mobile site
+ *  About us section...................Mobile site
+ *  How it works section...............Mobile site
+ *  Comments section...................Desktop site with modifications
+ *  Footer.............................Desktop site
+ *
+ */
+
+
+
+
+
+/**************************************
+ *  #INDEX  BANNER                    *
+ **************************************/
+
+
+#index-banner-medium {
+    position: relative;
+    height: 65.29vw;
+    width: 100vw;
+    max-width: 100%;
+    background-image: url("index-banner.png");
+    background-color: #615966;
+    background-blend-mode: multiply;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 77.3%, 34.9% 100%, 0% 76%);
+}
+
+#index-banner-medium-content {
+    margin-top: 10vw;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+/**************************************
+ *  #BOTTOM  BANNER                    *
+ **************************************/
+
+
+#bottom-banner-medium {
+    position: relative;
+    height: 54.65vw;
+    min-height: 380px;
+    width: 100vw;
+    max-width: 100%;
+    margin-top: 5vw;
+    background: url("bottom-banner.png") no-repeat;
+    background-color: #615966;
+    background-blend-mode: multiply;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-clip-path: polygon(0% 1.7%, 34% 23.7%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+
+#bottom-banner-medium-content {
+    position: relative;
+    top: 20%;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+/**************************************
+ *  #COMMENTS                         *
+ **************************************/
+
+
+@media (max-width:1000px) and (min-width:600px) {
+  .comment-text {
+      max-width: 53vw;
+  }
+}

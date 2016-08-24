@@ -9,14 +9,14 @@ var source = require('vinyl-source-stream');
 gulp.task('styles', function(){
   gulp
     .src('css/strv_master.scss')
-    .pipe(sass())
+    .pipe(sass({ style: 'compressed' }))
     .pipe(rename('strv.css'))
     .pipe(gulp.dest('public'));
 })
 
 gulp.task('assets', function(){
   gulp
-    .src('assets/*')
+    .src('assets/**/*')
     .pipe(gulp.dest('public'))
 })
 

@@ -1,0 +1,246 @@
+/**
+ *  Author      : Juan Sebastian Ruiz
+ *  Description : Here are all the custom rulesets regarding the version of the
+ *                website for small devices, this being, devices with a
+ *                viewport width smaller than 600px, as well as the rulesets
+ *                for the specific some global elements have on small devices.
+ *
+ *
+ * CONTENTS
+ *
+ *  SETTINGS
+ *  GLOBAL.................Globally-available variables and config.
+ *
+ *
+ *  COMPONENTS
+ *   #NAVIGATION............The page's navbar.
+ *   #INDEX BANNER..........Banner at the top of the page
+ *   #ABOUT US..............About us section
+ *   #HOW IT WORKS..........How it works section, steps to acquire an strv m6
+ *   #COMMENTS..............Comment section
+ *   #BOTTOM BANNER.........Banner shown after the comment section
+ */
+
+
+
+
+
+
+/**************************************
+ *  #GLOBAL                           *
+ **************************************/
+
+
+ .mobile-caption {
+     font-size: 1.7rem;
+     font-weight: 500;
+     text-align: center;
+ }
+
+
+
+
+
+/**************************************
+ *  #NAVIGATION                       *
+ **************************************/
+
+
+.side-nav {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+}
+
+#sidenav-overlay {
+    z-index: -1;
+}
+
+
+
+
+/**************************************
+ *  #INDEX  BANNER                    *
+ **************************************/
+
+
+#index-banner-mobile {
+    position: relative;
+    height: 638px;
+    width: 100vw;
+    max-width: 100%;
+    background: url("index-banner-mobile.png") center;
+    background-color: #615966;
+    background-blend-mode: multiply;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 94.5%, 24.9% 100%, 0% 97%);
+}
+
+#index-banner-content-mobile {
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+/**************************************
+ *  #ABOUT  US                        *
+ **************************************/
+
+
+#handmade-mobile {
+    width: 91.1vw;
+    height: 56.6vw;
+}
+
+#handmade-mobile-container {
+    margin-left: 5vw;
+    margin-top: 50.7px;
+}
+
+
+#about-us-mobile-container {
+    margin-top: -30px;
+    width: 93.4vw;
+}
+
+.about-us-mobile-divider {
+    height: 1px;
+    background-color: #E7E7E7;
+    width: 76.033%;
+    margin-left: 11.9%;
+}
+
+.about-us-text-mobile-container {
+    margin-top: 30px;
+    margin-bottom: 46.4px;
+}
+
+.about-us-mobile-caption {
+    margin-top: 31px;
+}
+
+.about-us-mobile-text {
+    margin-top: 36.3px !important;
+    color: #9A9A9A !important;
+    max-width: 85%;
+    margin-left: 7% !important;
+    font-weight: 400;
+    line-height: 29px !important;
+}
+
+
+
+
+
+/**************************************
+ *  #HOW  IT  WORKS                   *
+ **************************************/
+
+
+#how-it-works-mobile-bg {
+    width: 100vw;
+    height: 1440px;
+    background-color: #F8F8F8;
+    position: absolute;
+    z-index: -1;
+    top: 2060px;
+    -webkit-clip-path: polygon(0% 0.9%, 34.7% 16.1%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.how-it-works-mobile-step-caption {
+    z-index: 1;
+}
+
+.how-it-works-mobile-step-number {
+    z-index: -1;
+    margin-bottom: -120px;
+    font-size: 122px;
+    font-weight: bold;
+    color: #E3E3E3;
+}
+
+
+.how-it-works-mobile-divider {
+    width: 37vw;
+    float: left;
+    height: 1px;
+    background-color: #E7E7E7;
+    margin-top: 52px;
+    margin-bottom: 29px;
+    margin-left: 25%;
+}
+
+
+
+
+
+/**************************************
+ *  #COMMENTS                         *
+ **************************************/
+
+
+#commenting-avatar-mobile {
+    margin-top: 20px;
+}
+
+
+#comment-textbox-mobile {
+    font-size: 1.3rem;
+    border-color: #E7E7E7;
+}
+
+
+#send-button-mobile {
+    margin-top: -30px;
+    background: url("icn-send.svg") center no-repeat;
+}
+
+#send-button-mobile:hover {
+    background-color: transparent;
+    background: url("icn-send-hover.svg") center no-repeat
+}
+
+
+#comment-number-mobile {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-left: -30px;
+}
+
+
+
+
+
+/**************************************
+ *  #BOTTOM  BANNER                   *
+ **************************************/
+
+
+ #bottom-banner-mobile {
+     position: relative;
+     height: 790px;
+     width: 100vw;
+     max-width: 100%;
+     margin-top: 5vw;
+     background: url("bottom-banner-mobile.png") center;
+     background-color: #615966;
+     background-blend-mode: multiply;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+     -webkit-clip-path: polygon(0% 1.6%, 26.14% 5.2%, 100% 0%, 100% 100%, 0% 100%);
+ }
+ #bottom-banner-mobile-content {
+     position: relative;
+     top: 6.25vw;
+     color: white;
+     text-align: center;
+ }

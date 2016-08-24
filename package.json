@@ -13,24 +13,26 @@
     "browserify": "^13.1.0",
     "browserify-shim": "^3.8.12",
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
-"browser": {
-"jquery": "./node_modules/jquery/dist/jquery.js",
-"materialize": "./node_modules/materialize-css/bin/materialize.js"
-},
-"browserify-shim": {
-  "jquery": "$",
-  "materialize": "materialize"
-},
-"browserify": {
-  "transform": [
-    "browserify-shim"
-  ]
-}
-  ,
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "materialize": "./node_modules/materialize-css/bin/materialize.js"
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "materialize": "materialize"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
   "scripts": {
     "build": "gulp"
   }
