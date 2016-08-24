@@ -17,16 +17,16 @@ html(lang="en")
           polygon(points="0,0 1,0 1,0.773 0.349,1 0,0.76 0,0")
         clippath#clip-index-mobile(clippathunits="objectBoundingBox")
           polygon(points="0,0 1,0 1,0.953 0.249,1 0,0.97")
-        clippath#clip-bottom(clippathunits='objectBoundingBox')
+        clippath#clip-bottom(clippathunits="objectBoundingBox")
           polygon(points="0,0.017 0.34,0.237 1,0 1,1 0,1")
         clippath#clip-bottom-mobile(clippathunits="objectBoundingBox")
           polygon(points="0,0.016 0.25,0.05 1,0 1,1 0,1")
         clippath#clip-how-it-works(clippathunits="objectBoundingBox")
           polygon(points="0,0.01 0.34,0.16 1,0 1,1 0,1")
-    // Navigation bar
+    // NAVIGATION BAR
     nav.pushpin-nav-bar
       .nav-wrapper
-        // Desktop Navigation
+        // DESKTOP
         ul.hide-on-med-and-down
           li
             a.li-no-hover(href="#about-us") ABOUT US
@@ -34,7 +34,7 @@ html(lang="en")
             a(href="#how-it-works") HOW IT WORKS
           li
             a(href="#comments") COMMENTS
-        // Mobile Navigation
+        // MOBILE
         a.right.button-collapse(href="#", data-activates="mobile-menu")
           i.material-icons menu
         div
@@ -93,7 +93,7 @@ html(lang="en")
         a.waves-effect.center.waves-light.btn-large.z-depth-0.button(href="#comments")
           | LEAVE A COMMENT
           img.arrow-icon(src="arrow-icn.svg")
-    // ABOUT US section
+    // ABOUT US SECTION
     #about-us.section.scrollspy
       #title-about-us.section-title
         h6.section-number 01
@@ -174,7 +174,7 @@ html(lang="en")
                     |  in the World!
                   p.about-us-mobile-text.light.flow-text
                     | Designer is a human, right? Handmade things takes a lot of time and energy. Every designer have 2 cars in his pocket. So hurry up!
-    // How it Works
+    // HOW IT WORKS SECTION
     #how-it-works-bg.hide-on-med-and-down(style="clip-path: url('#clip-how-it-works');")
     #how-it-works-mobile-bg.hide-on-med-and-up
     #how-it-works.section.scrollspy
@@ -247,7 +247,7 @@ html(lang="en")
           .row.center.hide-on-med-and-down.bmw-image-section
             img#STRV-watermark.s12(src="strv_m6.svg")
             img#bmw-image.s12(src="image-bmw.png")
-    // COMMENTS
+    // COMMENTS SECTION
     #comments.section.scrollspy
       #title-comments.section-title
         h6.section-number 03
@@ -258,17 +258,17 @@ html(lang="en")
           #comment-field.col.s12.card
             .hide-on-small-only
               #commenting-avatar.col.m1.push-m1.avatar
-                img(src='Avatar.png')
-              input#comment-textbox.col.m9.push-m1(type='text', name='name', placeholder='Write your comment here...')
+                img(src="avatar.png")
+              input#comment-textbox.col.m9.push-m1(type="text", name="name", placeholder="Write your comment here...")
               .col.m1.push-m1
-                button#send-button.btn-flat.waves-effect.waves-light.btn-floating.click-to-toggle.btn-large(type='submit')
+                button#send-button.btn-flat.waves-effect.waves-light.btn-floating.click-to-toggle.btn-large(type="submit")
             .hide-on-med-and-up
               #commenting-avatar-mobile.center-align.row
-                img(src='Avatar.png')
+                img(src="avatar.png")
               .row.center-align
-                input#comment-textbox-mobile.col.s10.push-s1.center-align(type='text', name='name', placeholder='Write your comment here...')
+                input#comment-textbox-mobile.col.s10.push-s1.center-align(type="text", name="name", placeholder="Write your comment here...")
               .row.center-align
-                button#send-button-mobile.btn-flat.waves-effect.waves-light.btn-floating.center-align.btn-large(type='submit')
+                button#send-button-mobile.btn-flat.waves-effect.waves-light.btn-floating.center-align.btn-large(type="submit")
         .row
           .col.s7.hide-on-small-only
             span#comment-number 3 Comments
@@ -279,13 +279,13 @@ html(lang="en")
             .comment
               .row
                 .col.s1.avatar
-                  img(src='Avatar.png')
+                  img(src="avatar.png")
                 .comment-tag.col.s7
                   .commenter-name
                     span Saul Goodman
                   .comment-time
                     span 4 days
-                a.right.reply-icon(href='#')
+                a.right.reply-icon(href="#comments")
               .row
                 .comment-text.col.s12.l11.offset-s1
                   p
@@ -299,7 +299,7 @@ html(lang="en")
                     span Saul Goodman
                   .comment-time
                     span 4 days
-                a.right.reply-icon(href='#')
+                a.right.reply-icon(href="#comments")
               .row
                 .comment-text.col.s12.l9.offset-s1
                   p
@@ -308,13 +308,13 @@ html(lang="en")
             .comment
               .row
                 .col.s1.avatar
-                  img(src='Avatar.png')
+                  img(src="avatar.png")
                 .comment-tag.col.s7
                   .commenter-name
                     span Saul Goodman
                   .comment-time
                     span 4 days
-                a.right.reply-icon(href='#comments')
+                a.right.reply-icon(href="#comments")
               .row
                 .comment-text.col.s12.l11.offset-s1
                   p
@@ -329,9 +329,9 @@ html(lang="en")
         h4.text_h.center.banner-subtitle
           span
             | Simply designy car for designers
-        a.waves-effect.center.waves-light.btn-large.z-depth-0.button(href='#how-it-works')
+        a.waves-effect.center.waves-light.btn-large.z-depth-0.button(href="#how-it-works")
           | BUILD YOUR OWN
-          img.arrow-icon(src='arrow-icn.svg')
+          img.arrow-icon(src="arrow-icn.svg")
     // Medium
     #bottom-banner-medium.section.no-pad-bot.valign-wrapper.show-on-medium.hide-on-small-only.hide-on-large-only(style="clip-path: url('#clip-bottom');")
       #bottom-banner-medium-content.center-block
@@ -341,9 +341,9 @@ html(lang="en")
         h4.text_h.center.banner-subtitle
           span
             | Simply designy car for designers
-        a.waves-effect.center.waves-light.btn-large.z-depth-0.button(href='#how-it-works')
+        a.waves-effect.center.waves-light.btn-large.z-depth-0.button(href="#how-it-works")
           | BUILD YOUR OWN
-          img.arrow-icon(src='arrow-icn.svg')
+          img.arrow-icon(src="arrow-icn.svg")
     // Mobile
     #bottom-banner-mobile.section.no-pad-bot.valign-wrapper.hide-on-med-and-up(style="clip-path: url('#clip-bottom-mobile');")
       #bottom-banner-mobile-content.center-block
@@ -355,17 +355,18 @@ html(lang="en")
             | Simply designy car
             br
             |  for designers
-        a.waves-effect.center.waves-light.btn-large.z-depth-0.button(href='#how-it-works')
+        a.waves-effect.center.waves-light.btn-large.z-depth-0.button(href="#how-it-works")
           | BUILD YOUR OWN
-          img.arrow-icon(src='arrow-icn.svg')
-    // end Bottom Banner
+          img.arrow-icon(src="arrow-icn.svg")
     // Footer
     footer.page-footer.default_color
       #share-on.footer-copyright.default_color
         #share-on-container.container.valign-wrapper
           .center-block
             h5.social SHARE ON
-            img.social-icon(src='icn-facebook.svg', alt='facebook-icon', width='28px', height='28px')
-            img.social-icon(src='icn-twitter.svg', alt='twitter-icon', width='28px', height='28px')
+            a(href='https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fstrvm6.southcentralus.cloudapp.azure.com%3A8080%2F&t=STRV%20M6%20%23hireme', title='Share on Facebook', target='_blank')
+              img.social-icon(src="icn-facebook.svg", alt="facebook-icon", width="28px", height="28px")
+            a(href='https://twitter.com/intent/tweet?source=http%3A%2F%2Fstrvm6.southcentralus.cloudapp.azure.com%3A8080%2F&text=STRV%20M6%20%23hireme:%20http%3A%2F%2Fstrvm6.southcentralus.cloudapp.azure.com%3A8080%2F', target='_blank', title='Tweet')
+              img.social-icon(src="icn-twitter.svg", alt="twitter-icon", width="28px", height="28px")
     // Import jQuery before materialize.js
-    script(src='strv.js')
+    script(src="strv.js")

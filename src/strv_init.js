@@ -5,16 +5,24 @@
  *               data and events that are going to bee used on the page.
  *
  */
-// var $ = jQuery = require('jquery');
-// require('../node_modules/materialize-css/js/initial.js');
-// require('../node_modules/materialize-css/js/jquery.easing.1.3.js');
-// require('../node_modules/materialize-css/js/hammer.min.js');
-// require('../node_modules/materialize-css/js/buttons.js');
-// require('../node_modules/materialize-css/js/scrollSpy.js');
-// require('../node_modules/materialize-css/js/sideNav.js');
-// require('../node_modules/materialize-css/js/waves.js');
-// require('../node_modules/materialize-css/js/pushpin.js');
 
+/*
+ * These are the required plugins from materialize
+ *
+ * require ("jquery.easing.1.3.js");
+ * require("velocity.min.js");
+ * require("hammer.min.js");
+ * require("jquery.hammer.js");
+ * require('../node_modules/materialize-css/js/initial.js');
+ * require('../node_modules/materialize-css/js/buttons.js');*
+ * require('../node_modules/materialize-css/js/scrollSpy.js');
+ * require('../node_modules/materialize-css/js/sideNav.js');
+ * require('../node_modules/materialize-css/js/pushpin.js');
+ *
+ * TODO solve all the unspecified dependencies of materialize so the project
+ * doesn't have to load all the plugins.
+ *
+ **/
 
 
 
@@ -95,7 +103,7 @@ $(document).ready(function() {
     }
   });
 
-  /*
+  /* TODO:
    *Retrieving the comments from a json file, iterating through each comment,
    *if the comment is a parent comment (as opposed to a threaded one), it is
    *printed on the page, in that same step the json file is searched again for
