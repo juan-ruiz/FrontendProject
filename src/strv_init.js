@@ -61,7 +61,7 @@ $(document).ready(function() {
           return false;
       }else{
         console.log(textbox.val());
-        $('#comments-row').append('<div class="col s12 m9 card z-depth-1 push-m1 comment-card"><div class="comment"><div class="row"><div class="col s1 avatar"><img src="avatar.png"/></div><div class="comment-tag col s7"><div class="commenter-name"><span>Hire Juan</span></div><div class="comment-time"><span>4 days</span></div></div><a href="#comments" class="right reply-icon"></a></div><div class="row"><div class="comment-text col s12 l11 offset-s1"><p>'+textbox.val()+'</p></div></div></div></div>');
+        $('#comments-row').append('<div class="col s12 m9 card z-depth-1 push-m1 comment-card"><div class="comment"><div class="row"><div class="col s1 avatar"><img src="avatar.png"/></div><div class="comment-tag col s7"><div class="commenter-name"><span>Juan Doe</span></div><div class="comment-time"><span>4 days</span></div></div><a href="#comments" class="right reply-icon"></a></div><div class="row"><div class="comment-text col s12 l11 offset-s1"><p>'+textbox.val()+'</p></div></div></div></div>');
         textbox.val('');
         var commentNumberSpan=$('#comment-number');
         var commentNumberSpanMobile=$('#comment-number-mobile');
@@ -84,7 +84,7 @@ $(document).ready(function() {
           return false;
       }else{
         console.log(textbox.val());
-        $('#comments-row').append('<div class="col s12 m9 card z-depth-1 push-m1 comment-card"><div class="comment"><div class="row"><div class="col s1 avatar"><img src="avatar.png"/></div><div class="comment-tag col s7"><div class="commenter-name"><span>Hire Juan</span></div><div class="comment-time"><span>4 days</span></div></div><a href="#comments" class="right reply-icon"></a></div><div class="row"><div class="comment-text col s12 l11 offset-s1"><p>'+textbox.val()+'</p></div></div></div></div>');
+        $('#comments-row').append('<div class="col s12 m9 card z-depth-1 push-m1 comment-card"><div class="comment"><div class="row"><div class="col s1 avatar"><img src="avatar.png"/></div><div class="comment-tag col s7"><div class="commenter-name"><span>Juan Doe</span></div><div class="comment-time"><span>4 days</span></div></div><a href="#comments" class="right reply-icon"></a></div><div class="row"><div class="comment-text col s12 l11 offset-s1"><p>'+textbox.val()+'</p></div></div></div></div>');
         textbox.val('');
         var commentNumberSpan=$('#comment-number-mobile');
         var commentNumberSpanDesktop=$('#comment-number');
