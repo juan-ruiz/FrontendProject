@@ -147,7 +147,7 @@ $(document).ready(function() {
          $('#comments-row').append('<div class="col s12 m9 card z-depth-1 push-m1 comment-card"><div class="comment"><div class="row"><div class="col s1 avatar"><img src="avatar.png"/></div><div class="comment-tag col s7"><div class="commenter-name"><span>'+commentName+'</span></div><div class="comment-time"><span>4 days</span></div></div><a href="#comments" class="right reply-icon"></a></div><div class="row"><div class="comment-text col s12 l11 offset-s1"><p>'+commentText+'</p></div></div></div></div>');
          data.map(function(threadComment){
            if(threadComment.parent==commentId){
-             $('#comments-row').append('<div class="col s12 m8 card push-m2 thread-comment-card"><div class="comment"><div class="row"><div class="col s1 avatar"><img src="avatar.png"/></div><div class="comment-tag col s7"><div class="commenter-name"><span>'+commentName+'</span></div><div class="comment-time"><span>4 days</span></div></div><a href="#comments" class="right reply-icon"></a></div><div class="row"><div class="comment-text col s12 l9 offset-s1"><p>'+commentText+'</p></div></div></div></div>');
+             $('#comments-row').append('<div class="col s12 m8 card push-m2 thread-comment-card"><div class="comment"><div class="row"><div class="col s1 avatar"><img src="avatar.png"/></div><div class="comment-tag col s7"><div class="commenter-name"><span>'+threadComment.author+'</span></div><div class="comment-time"><span>4 days</span></div></div><a href="#comments" class="right reply-icon"></a></div><div class="row"><div class="comment-text col s12 l9 offset-s1"><p>'+threadComment.text+'</p></div></div></div></div>');
            }
          });
        }
