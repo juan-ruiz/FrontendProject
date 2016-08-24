@@ -59,6 +59,15 @@ $(document).ready(function() {
               button.addClass('send-button-error');
           }
           return false;
+      }else{
+        console.log(textbox.val());
+        $('#comments-row').append('<div class="col s12 m9 card z-depth-1 push-m1 comment-card"><div class="comment"><div class="row"><div class="col s1 avatar"><img src="avatar.png"/></div><div class="comment-tag col s7"><div class="commenter-name"><span>Hire Juan</span></div><div class="comment-time"><span>4 days</span></div></div><a href="#comments" class="right reply-icon"></a></div><div class="row"><div class="comment-text col s12 l11 offset-s1"><p>'+textbox.val()+'</p></div></div></div></div>');
+        textbox.val('');
+        var commentNumberSpan=$('#comment-number');
+        var commentNumberSpanMobile=$('#comment-number-mobile');
+        var commentNumber=parseInt(commentNumberSpan.text().charAt(0)) +1;
+        commentNumberSpan.text(commentNumber + ' Comments');
+        commentNumberSpanMobile.text(commentNumber + ' Comments');
       }
   });
   $('#send-button-mobile').click(function() {
@@ -73,6 +82,15 @@ $(document).ready(function() {
              button.addClass('send-button-error');
           }
           return false;
+      }else{
+        console.log(textbox.val());
+        $('#comments-row').append('<div class="col s12 m9 card z-depth-1 push-m1 comment-card"><div class="comment"><div class="row"><div class="col s1 avatar"><img src="avatar.png"/></div><div class="comment-tag col s7"><div class="commenter-name"><span>Hire Juan</span></div><div class="comment-time"><span>4 days</span></div></div><a href="#comments" class="right reply-icon"></a></div><div class="row"><div class="comment-text col s12 l11 offset-s1"><p>'+textbox.val()+'</p></div></div></div></div>');
+        textbox.val('');
+        var commentNumberSpan=$('#comment-number-mobile');
+        var commentNumberSpanDesktop=$('#comment-number');
+        var commentNumber=parseInt(commentNumberSpan.text().charAt(0)) +1;
+        commentNumberSpan.text(commentNumber + ' Comments');
+        commentNumberSpanDesktop.text(commentNumber + ' Comments');
       }
   });
 
@@ -103,12 +121,36 @@ $(document).ready(function() {
     }
   });
 
-  /* TODO:
+  /*
    *Retrieving the comments from a json file, iterating through each comment,
    *if the comment is a parent comment (as opposed to a threaded one), it is
    *printed on the page, in that same step the json file is searched again for
    *its son comments so they can be printed right below it. This is done for all
    *comments on the file.
    */
+   $.getJSON('comments.json',function(data){
 
+      var commentCount=data.length;
+      console.log(commentCount);
+      $('#comment-number').text(commentCount +' Comments');
+      $('#comment-number-mobile').text(commentCount +' Comments');
+
+     data.map(function(comment){
+
+       var commentId=comment.id;
+       var commentParent=comment.parent;
+       var commentName=comment.author;
+       var commentTime = "4 days";
+       var commentText = comment.text;
+
+       if(!(typeof commentParent != 'undefined')){
+         $('#comments-row').append('<div class="col s12 m9 card z-depth-1 push-m1 comment-card"><div class="comment"><div class="row"><div class="col s1 avatar"><img src="avatar.png"/></div><div class="comment-tag col s7"><div class="commenter-name"><span>'+commentName+'</span></div><div class="comment-time"><span>4 days</span></div></div><a href="#comments" class="right reply-icon"></a></div><div class="row"><div class="comment-text col s12 l11 offset-s1"><p>'+commentText+'</p></div></div></div></div>');
+         data.map(function(threadComment){
+           if(threadComment.parent==commentId){
+             $('#comments-row').append('<div class="col s12 m8 card push-m2 thread-comment-card"><div class="comment"><div class="row"><div class="col s1 avatar"><img src="avatar.png"/></div><div class="comment-tag col s7"><div class="commenter-name"><span>'+commentName+'</span></div><div class="comment-time"><span>4 days</span></div></div><a href="#comments" class="right reply-icon"></a></div><div class="row"><div class="comment-text col s12 l9 offset-s1"><p>'+commentText+'</p></div></div></div></div>');
+           }
+         });
+       }
+     });
+   });
 });
