@@ -3,7 +3,7 @@
  *                                                                  *
  *                                                                  *
  *                                                                  *
- *                       STRV M6 Landing Page                       *
+ *                       M6 Landing Page                            *
  *                                                                  *
  *                                                                  *
  *                                                                  *
@@ -11,8 +11,8 @@
 
 
 
- This is a vertical-scrolling single-page website to serve as a landing page
- for one of strv's project. it is composed of 1 index banner, an "About us"
+ This is a vertical-scrolling single-page website to serve as a landing page. 
+ it is composed of 1 index banner, an "About us"
  section, a "How it works" section, a comments section, a banner at the bottom
  of the page, and a footer with fb and twitter share buttons.
 
@@ -48,6 +48,3 @@
  Regarding the structure of this project, you can find the css and js code on
  the respectively named folders, the main pug file on the views folder and all
  the static files on the assets folder.
-
-
-Live demo: http://strvm6.southcentralus.cloudapp.azure.com:8080/
